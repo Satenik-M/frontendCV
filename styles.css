@@ -7,7 +7,7 @@ body {
 }
 #content{
     width:1024px;
-    background-color:#CAB3C0; 
+    background-color:#FFFEFD; 
     border:1px solid #8a6464;
     box-shadow:2px 2px 10px #808080;
     margin-left:auto;
@@ -23,20 +23,42 @@ h1{
     font-size:2.5em;
 }
 
+#header time{
+    color:#4A454C;
+    font-size:1.5em;
+    font-style:oblique;
+}
+
 #profile h2{
     clear:left;
 }
 
-h2{
+h2, legend{
     color:#685D6D;
+}
+legend{
+    font-size:1.3em;
+    color:#4A454C;
+    font-weight:bold;
 }
 
 address li{
+
     float:left;
     padding:0.3em;
     border-right:1.5px solid #31312F;
     display:inline-block;
     list-style:none;
+}
+address li span{
+    color:#3D625C;
+    font-weight: bold;
+}
+
+address a{
+    text-decoration:none;
+    font-weight: bold;
+    color:#93193C;
 }
 
 header{
@@ -51,13 +73,13 @@ header section {
 
 main{
     padding-left:1em;
-    background-color:#E6D4DE;
+    background-color:#CFBAC0;
     float:left;
     width:55%;
     margin:1.2em 1em 2em;
     border-radius: 30px ;
     line-height:1.6em;
-    box-shadow:inset 2px 2px 25px #A58B8B;
+    box-shadow: 5px 5px 10px #955D64;
 }
 
 
@@ -71,6 +93,7 @@ footer{
 
 table{
     border-collapse:collapse;
+    background-color: #A78B93       ;
 }
 
 col[span]{
@@ -88,8 +111,8 @@ td{
 
  img{
     background-color: white;
-     border: 1px solid #31312F;
-     box-shadow:2px 2px 25px black;
+     border-radius: 10px;
+     box-shadow:2px 2px 4px #955D64;
  }
 
  summary span{
@@ -107,6 +130,15 @@ td{
  input[type='submit']
  {
     margin-top:5px;
+    background-color: #5B8351;
+    color:white;
+
+ }
+ fieldset{
+    background-color: #CBD9C7;
+    border-radius: 20px;
+    border:none;
+    box-shadow: 3px 3px 6px #3D625C;
  }
  
 
