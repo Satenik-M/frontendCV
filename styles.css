@@ -1,5 +1,5 @@
 body {
-    
+
     font-family:Academy, 'Times New Roman';
     font-size:1.1em;
     text-align:justify;
@@ -21,11 +21,19 @@ h1, h2, h3 {
 h1{
     color:#4A454C;
     font-size:2.5em;
+    margin-bottom:1px;
+
+}
+hgroup h2{
+    text-decoration:underline;
+    font-style:oblique;
+    font-size:1.2em;
+    margin-top:2px;
 }
 
 #header time{
-    color:#4A454C;
-    font-size:1.5em;
+    
+    
     font-style:oblique;
 }
 
@@ -89,6 +97,8 @@ section {
 
 footer{
     clear:both;
+    text-align: right;
+    padding:1em;
 }
 
 table{
@@ -107,38 +117,57 @@ td{
     border-top:2px solid #31312F;
 }
 
- 
 
- img{
+
+img{
     background-color: white;
-     border-radius: 10px;
-     box-shadow:2px 2px 4px #955D64;
- }
+    border-radius: 10px;
+    box-shadow:2px 2px 4px #955D64;
+}
 
- summary span{
-     display:block;
-     font-size:0.8em;
-     font-style:italic;
- }
+summary span{
+   display:block;
+   font-size:0.8em;
+   font-style:italic;
+}
 
- summary{
-     outline:none;
- }
- input, textarea{
-    display:block;
- }
- input[type='submit']
- {
+summary{
+   outline:none;
+}
+input, select, textarea{
+    display:block ;
+    margin-bottom:10px;
+}
+input[type="checkbox"], input[type="radio"]{
+    display:inline-block;
+}
+input[type='submit']
+{
     margin-top:5px;
     background-color: #5B8351;
     color:white;
 
- }
- fieldset{
+}
+
+fieldset#total{
     background-color: #CBD9C7;
     border-radius: 20px;
     border:none;
     box-shadow: 3px 3px 6px #3D625C;
- }
- 
+}
+label{
+    display:inline-block;
+    margin-bottom:2px;
+}
+#skillsEnvolved{
+    list-style:none;
+    padding:2px;
+    margin-top: 2px;
+    margin-bottom:2px;
+    
+}
+.innerLegend{
+    font-size: 1.1em;
+}
+
 
