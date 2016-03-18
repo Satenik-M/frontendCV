@@ -1,4 +1,4 @@
-# CLoudSMB Program
+# CloudSMB Program
 ##Frontend group
 
 ###First chalenge
