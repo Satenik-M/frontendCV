@@ -80,7 +80,7 @@ header section {
 }
 
 main{
-    padding-left:1em;
+    padding:0.5em;
     background-color:#CFBAC0;
     float:left;
     width:55%;
@@ -103,7 +103,8 @@ footer{
 
 table{
     border-collapse:collapse;
-    background-color: #A78B93       ;
+    background-color: #A78B93 ;
+
 }
 
 col[span]{
@@ -168,6 +169,10 @@ label{
 }
 .innerLegend{
     font-size: 1.1em;
+}
+input, textarea, select{
+    font-family:inherit;
+    font-size:100%;
 }
 
 
