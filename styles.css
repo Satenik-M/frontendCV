@@ -13,7 +13,7 @@ body {
     margin-left:auto;
     margin-right:auto;
 }
-h1, h2, h3 {
+h1, h2  {
     letter-spacing:0.05em;
 
 }
@@ -173,6 +173,91 @@ label{
 input, textarea, select{
     font-family:inherit;
     font-size:100%;
+}
+
+
+/*------Print Media begins here-----------------*/
+@media print{
+
+    *{
+        
+        background-color:initial;
+        color:black;
+    }
+    body{
+        border-top:25px solid #666666;
+       
+    }
+    #content{
+        border:none;
+        box-shadow:none;
+    }
+    h1, h2{
+        color:black;
+        border-bottom:1px solid black;
+        padding-bottom:3px;
+
+    }
+    #header h1:first-of-type, #header h2:first-of-type{
+        border-bottom:none;
+    }
+    hgroup{
+        text-align:center;
+    }
+    address li{
+          float:left;
+        display:inline-block;
+        width:40%;
+        border-right:none;
+        box-sizing:border-box;
+        padding-left:150px;
+        
+      
+    }
+    /*address ul{
+        
+        width:auto;
+        margin-left:auto;
+        margin-right:auto;*/
+
+    }
+    
+
+
+    form{
+        display:none;
+    }
+    figure{
+        display:none;
+    }
+    header{
+        width:initial;
+        float:none;
+    }
+    main{
+        width:initial;
+        float:none;
+        border-radius:0;
+        box-shadow:none;
+    }
+    section#employment{
+        page-break-before: always;
+
+    }
+    section#profile{
+        width:initial;
+        padding-top:20px;/*does not work*/
+    }
+    h2+p, h2+ul, h2+ol, h2+table{
+        margin-left:100px;
+    }
+
+    /*details{
+        display:block;
+    } to be corrected*/
+
+    
+
 }
 
 
