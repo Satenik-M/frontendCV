@@ -37,9 +37,14 @@ hgroup h2{
     font-style:oblique;
 }
 
-#profile h2{
-    clear:left;
+#profile {
+    clear:both;
+    margin:20px 0;
+    width:100%;
+
+   
 }
+
 
 h2, legend{
     color:#685D6D;
@@ -58,6 +63,9 @@ address li{
     display:inline-block;
     list-style:none;
 }
+address ul{
+    overflow:hidden;
+}
 address li span{
     color:#3D625C;
     font-weight: bold;
@@ -70,9 +78,11 @@ address a{
 }
 
 header{
-    width:35%;
+    width:40%;
     float:left;
     padding-left:2em;
+    box-sizing:border-box;
+
 }
 
 header section {
@@ -82,12 +92,13 @@ header section {
 main{
     padding:0.5em;
     background-color:#CFBAC0;
-    float:left;
+    float:right;
     width:55%;
     margin:1.2em 1em 2em;
     border-radius: 30px ;
     line-height:1.6em;
     box-shadow: 5px 5px 10px #955D64;
+    box-sizing:border-box;
 }
 
 
@@ -183,6 +194,7 @@ input, textarea, select{
 
 /*------Print Media begins here-----------------*/
 @media print{
+
     form{
         display:none;
     }
@@ -193,13 +205,11 @@ input, textarea, select{
         display:none;
     }
 
-    *{
-        
-        background-color:initial;
-        color:black;
-    }
+    
     body{
+        font-family: 'Times New Roman';
         border-top:25px solid #666666;
+
        
     }
     #content{
@@ -217,11 +227,12 @@ input, textarea, select{
     }
     hgroup{
         text-align:center;
+        padding-top:30px;
     }
     address li{
           float:left;
         display:inline-block;
-        width:40%;
+        width:50%;
         border-right:none;
         box-sizing:border-box;
         padding-left:150px;
@@ -230,6 +241,9 @@ input, textarea, select{
     }
     address li span, address a{
         color:black;
+    }
+    address ul{
+        overflow:hidden;
     }
     
     
