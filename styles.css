@@ -178,6 +178,15 @@ input, textarea, select{
 
 /*------Print Media begins here-----------------*/
 @media print{
+    form{
+        display:none;
+    }
+    figure{
+        display:none;
+    }
+    footer{
+        display:none;
+    }
 
     *{
         
@@ -214,31 +223,28 @@ input, textarea, select{
         
       
     }
-    /*address ul{
-        
-        width:auto;
-        margin-left:auto;
-        margin-right:auto;
-
-    }*/
+    address li span, address a{
+        color:black;
+    }
     
-
-
-    form{
-        display:none;
-    }
-    figure{
-        display:none;
-    }
+    
     header{
-        width:initial;
+        width:90%;
         float:none;
     }
     main{
-        width:initial;
+        width:90%;
         float:none;
-        border-radius:;
+        border-radius:initial;
         box-shadow:none;
+        background:initial;
+    }
+    table{
+        background-color: initial;
+    }
+    meter{
+        display:none;
+
     }
     section#employment{
         page-break-before: always;
@@ -246,11 +252,16 @@ input, textarea, select{
     }
     section#profile{
         width:initial;
-        padding-top:20px;/*does not work*/
+    }
+    #profile h2{
+
+      
+        padding-top:50px;
     }
     h2+p, h2+ul, h2+ol, h2+table{
         margin-left:100px;
     }
+    details[open] { display: block; }
 
     /*details{
         display:block;
