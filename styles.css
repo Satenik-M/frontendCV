@@ -125,7 +125,12 @@ img{
     border-radius: 10px;
     box-shadow:2px 2px 4px #955D64;
 }
-
+details summary+p+ul, details summary+p {
+    display:none;
+}
+details summary:hover+p+ul, details summary:hover+p{
+    display:block;
+}
 summary span{
    display:block;
    font-size:0.8em;
@@ -261,12 +266,11 @@ input, textarea, select{
     h2+p, h2+ul, h2+ol, h2+table{
         margin-left:100px;
     }
-    details[open] { display: block; }
+    details summary+p+ul, details summary+p {
+    display:block;
+}
 
-    /*details{
-        display:block;
-    } to be corrected*/
-
+    
     
 
 }
