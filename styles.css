@@ -1,3 +1,7 @@
+
+
+
+
 body {
     
     font-family:Academy, 'Times New Roman';
@@ -18,10 +22,7 @@ body {
     margin-left:auto;
     margin-right:auto;
 }
-nav ul{
-    list-style:none;
-    font-weight:bold;
-}
+
 /*-----Header----------*/
 header{
   
@@ -30,7 +31,16 @@ header{
     background:url(Images/feather.jpg) #CFBAC0;
 
 }
-
+#header{
+   
+    width:auto;
+    height:180px;
+    background-color:rgba(255,255,255,0.7);
+  
+    margin-top:5%;
+    margin-bottom:5%;
+    
+}
 
 h1, h2  {
     letter-spacing:0.05em;
@@ -40,7 +50,9 @@ h1, h2  {
 h1{
     color:#4A454C;
     font-size:2.5em;
-    margin-bottom:1px;
+    margin-bottom:auto;
+    margin-top:0;
+    
 
 }
 h1+p{
@@ -48,20 +60,52 @@ h1+p{
     font-style:oblique;
     font-size:1.2em;
     margin-top:2px;
+    margin-bottom:0;
 }
 figure{
     width:auto;
     float:left;
+    margin:10px 30px 0 20px;
 }
 #heading{
     width:40%;
+    height:auto;
     float:left;
+    
 
+}
+nav{
+    display: inline-block;
+    width:auto;
+    height:inherit;
+}
+nav ul{
+    
+    list-style:none;
+    font-weight:bold;
+    margin:0;
+    padding-top:20px;
+    
+}
+nav li{
+    font-size:0.9em;
+}
+nav li::before{
+    content:"V ";
+    display:inline;
+    color:green;
+    
+}
+nav li>a:link, nav li>a:visited{
+    color:#4A454C;
+    text-decoration:none;
+    font-style:oblique;
+    
 }
 
 img{
     background-color: white;
-    opacity:0.9;
+   
     border-radius: 10px;
     box-shadow:2px 2px 4px #955D64;
 }
@@ -102,23 +146,40 @@ section {
    
     margin:20px 0;
     border-bottom:3px solid black;
-  
 
-   
+}
+section{
+    padding: 5tpx;
+}
+section:target{
+    box-shadow: 3px 3px 5px 2px   #8a6464,
+     -3px -3px  5px 2px #8a6464; 
+     background-color: #EFD5DC;
 }
 
 
 h2 {
     color:#685D6D;
 }
+#employment{
+    display:inline-block;
+    width:60%;
+}
 table{
     border-collapse:collapse;
-    background-color: #A78B93 ;
     width:100%;
 
 }
+.employment{
+    width:70%;
+}
+.years{
+    width:30%;
+}
+    
+    
 td{
-    padding:0.3em 1em;
+    padding:2px 5px;
     border-bottom:2px solid #31312F;
     border-top:2px solid #31312F;
 }
@@ -126,7 +187,8 @@ details summary+p+ul, details summary+p {
     display:none;
 }
 details summary:hover+p+ul, details summary:hover+p{
-    display:block;
+    display:inline-block;
+    
 }
 summary span{
    display:block;
@@ -136,6 +198,22 @@ summary span{
 
 summary{
    outline:none;
+}
+#education{
+    display:inline-block;
+    width:38%;
+    float:right;
+}
+#trainings{
+    display:inline-block;
+    width:38%;
+    float:right;
+    clear:right;
+}
+#skills{
+    clear:both;
+  
+    
 }
 
 
@@ -168,6 +246,7 @@ form#jobOffer{
     width: 400px;
     height: auto;
     margin:auto;
+    overflow:auto;
 }
 #formClosure{
     display:block;
