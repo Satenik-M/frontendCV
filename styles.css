@@ -1,11 +1,13 @@
 body {
-
+    
     font-family:Academy, 'Times New Roman';
     font-size:1.1em;
     text-align:justify;
     
 }
 #content{
+    position:relative;
+
     display:flex;
     flex-direction: column;
    
@@ -34,15 +36,142 @@ h1+p{
     margin-top:2px;
 }
 figure{
-    width:30%;
+    width:auto;
     float:left;
 }
 #header{
     width:40%;
     float:left;
 }
+#wrapper{
+    width:90%;
+    margin:20px auto;
+    padding:15px;
+    border:1px solid black;
 
 
+}
+/*----------Form Hiding-Showing---------*/
+#jobOfferWrapper{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+#jobOfferWrapper:target{
+    display:table;
+}
+
+#containerForPost{
+    width:100%;
+    height:100%;
+    display:table-cell;
+    vertical-align:middle;
+    margin:auto;
+
+}
+form#jobOffer{
+    display:block;
+    position:relative;
+    width: 400px;
+    height: auto;
+    margin:auto;
+}
+#formClosure{
+    display:block;
+    margin:auto;
+    width:400px;
+    height:0;
+    z-index:2;
+    cursor:default;
+    text-align:right;
+
+
+
+}
+#formClosure::after{
+    content:"X";
+    text-align:center;
+    font-weight: bold;
+    cursor:pointer;
+    display:inline-block;
+    position:relative;
+    top:10px;
+    left:-5px;
+    border:2px outset white;
+    border-radius:5px;
+    color:white;
+    background-color:#5B8351;
+    width:20px;
+    height:20px;
+    z-index:4;
+
+
+}
+#formClosure::before{
+content:"";
+display:block;
+width:100%;
+height:100%;
+position:fixed;
+top:0;
+left:0;
+background-color:#FFFEFD;
+opacity:0.65;
+
+}
+/*---------End of Form Hiding/Showing----------*/ 
+
+/*----------Form design rules--------------*/
+form{
+    border:5px outset white;
+    border-radius:20px 20px;
+     background-color:#CBD9C7;
+     box-shadow: 3px 3px 6px #3D625C;
+}
+input, select, textarea{
+    display:block ;
+    margin-bottom:10px;
+}
+input[type="checkbox"], input[type="radio"]{
+    display:inline-block;
+}
+input[type='submit']
+{
+    margin-top:5px;
+    background-color: #5B8351;
+    color:white;
+
+}
+
+fieldset#total{
+   
+    /*border-radius: 20px;*/
+    border:none;
+    
+}
+label{
+    display:inline-block;
+    margin-bottom:2px;
+}
+#skillsEnvolved{
+    list-style:none;
+    padding:2px;
+    margin-top: 2px;
+    margin-bottom:2px;
+    
+}
+.innerLegend{
+    font-size: 1.1em;
+}
+input, textarea, select{
+    font-family:inherit;
+    font-size:100%;
+}
+/*--------End of Form Design----------*/
 
 #profile time{
     
@@ -53,7 +182,8 @@ figure{
 #profile {
    
     margin:20px 0;
-    width:100%;
+    border-bottom:3px solid black;
+  
 
    
 }
@@ -115,12 +245,13 @@ main{
 
 section {
     font-size:1.2em;
+
 }
 
 footer{
     flex:1 1 auto;
     clear:both;
-    text-align: right;
+    text-align: center;
     padding:1em;
 }
 
@@ -144,6 +275,7 @@ td{
 
 
 
+
 img{
     background-color: white;
     border-radius: 10px;
@@ -164,45 +296,8 @@ summary span{
 summary{
    outline:none;
 }
-input, select, textarea{
-    display:block ;
-    margin-bottom:10px;
-}
-input[type="checkbox"], input[type="radio"]{
-    display:inline-block;
-}
-input[type='submit']
-{
-    margin-top:5px;
-    background-color: #5B8351;
-    color:white;
 
-}
 
-fieldset#total{
-    background-color: #CBD9C7;
-    border-radius: 20px;
-    border:none;
-    box-shadow: 3px 3px 6px #3D625C;
-}
-label{
-    display:inline-block;
-    margin-bottom:2px;
-}
-#skillsEnvolved{
-    list-style:none;
-    padding:2px;
-    margin-top: 2px;
-    margin-bottom:2px;
-    
-}
-.innerLegend{
-    font-size: 1.1em;
-}
-input, textarea, select{
-    font-family:inherit;
-    font-size:100%;
-}
 
 
 /*------Print Media begins here-----------------*/
