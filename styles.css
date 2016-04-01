@@ -124,10 +124,7 @@ main{
 }
 
 
-section {
-    font-size:1.2em;
 
-}
 #mainAreaWrapper{
     width:90%;
     margin:20px auto;
@@ -149,7 +146,8 @@ section {
 
 }
 section{
-    padding: 5tpx;
+    font-size:1.2em;
+ padding: 5tpx;
 }
 section:target{
     box-shadow: 3px 3px 5px 2px   #8a6464,
@@ -164,11 +162,17 @@ h2 {
 #employment{
     display:inline-block;
     width:60%;
+    float:left;
+   
 }
 table{
     border-collapse:collapse;
     width:100%;
+    margin-bottom:20px;
 
+}
+table td ul{
+    border:none;
 }
 .employment{
     width:70%;
@@ -183,13 +187,14 @@ td{
     border-bottom:2px solid #31312F;
     border-top:2px solid #31312F;
 }
+/*
 details summary+p+ul, details summary+p {
     display:none;
 }
 details summary:hover+p+ul, details summary:hover+p{
     display:inline-block;
     
-}
+}*/
 summary span{
    display:block;
    font-size:0.8em;
@@ -203,6 +208,7 @@ summary{
     display:inline-block;
     width:38%;
     float:right;
+     
 }
 #trainings{
     display:inline-block;
@@ -210,11 +216,41 @@ summary{
     float:right;
     clear:right;
 }
-#skills{
-    clear:both;
-  
+     
+#strengths{
+    display:inline-block;
+    width:38%;
+    float:right;
     
 }
+#skills{
+    display:inline-block;
+    width:38%;
+    float:right;
+    margin-bottom:10px;
+}
+#skills ul{
+    list-style:none;
+    padding-left:20px
+
+}
+#skills table{
+    border:none;
+    text-align:left;
+}
+#hobbies{
+    margin-top:20px;
+    clear:left;
+    border-top:3px solid black;
+}
+#references{
+    
+    border-top:3px solid black;
+}
+section ol, section ul{
+    border-left:3px solid black;
+}
+
 
 
 /*---------End of Main----------*/
