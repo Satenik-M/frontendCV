@@ -12,12 +12,26 @@ body {
     flex-direction: column;
    
     width:1024px;
-    background-color:#FFFEFD; 
+    background-color:white; 
     border:1px solid #8a6464;
     box-shadow:2px 2px 10px #808080;
     margin-left:auto;
     margin-right:auto;
 }
+nav ul{
+    list-style:none;
+    font-weight:bold;
+}
+/*-----Header----------*/
+header{
+  
+    flex: 1 1 auto;
+    box-sizing:border-box;
+    background:url(Images/feather.jpg) #CFBAC0;
+
+}
+
+
 h1, h2  {
     letter-spacing:0.05em;
 
@@ -39,11 +53,38 @@ figure{
     width:auto;
     float:left;
 }
-#header{
+#heading{
     width:40%;
     float:left;
+
 }
-#wrapper{
+
+img{
+    background-color: white;
+    opacity:0.9;
+    border-radius: 10px;
+    box-shadow:2px 2px 4px #955D64;
+}
+/*-----End of Header--------*/
+/*-----Main---------*/
+main{
+    flex:2 1 auto;
+    padding:0.5em;
+    background-color:#FFFEFD;
+   
+    margin:1.2em 1em 2em;
+    
+    line-height:1.6em;
+    box-shadow: 5px 5px 10px #955D64;
+    box-sizing:border-box;
+}
+
+
+section {
+    font-size:1.2em;
+
+}
+#mainAreaWrapper{
     width:90%;
     margin:20px auto;
     padding:15px;
@@ -51,6 +92,54 @@ figure{
 
 
 }
+#profile time{
+    
+    
+    font-style:oblique;
+}
+
+#profile {
+   
+    margin:20px 0;
+    border-bottom:3px solid black;
+  
+
+   
+}
+
+
+h2 {
+    color:#685D6D;
+}
+table{
+    border-collapse:collapse;
+    background-color: #A78B93 ;
+    width:100%;
+
+}
+td{
+    padding:0.3em 1em;
+    border-bottom:2px solid #31312F;
+    border-top:2px solid #31312F;
+}
+details summary+p+ul, details summary+p {
+    display:none;
+}
+details summary:hover+p+ul, details summary:hover+p{
+    display:block;
+}
+summary span{
+   display:block;
+   font-size:0.8em;
+   font-style:italic;
+}
+
+summary{
+   outline:none;
+}
+
+
+/*---------End of Main----------*/
 /*----------Form Hiding-Showing---------*/
 #jobOfferWrapper{
     display:none;
@@ -173,30 +262,13 @@ input, textarea, select{
 }
 /*--------End of Form Design----------*/
 
-#profile time{
-    
-    
-    font-style:oblique;
-}
 
-#profile {
-   
-    margin:20px 0;
-    border-bottom:3px solid black;
-  
-
-   
-}
-
-
-h2 {
-    color:#685D6D;
-}
 legend{
     font-size:1.3em;
     color:#4A454C;
     font-weight:bold;
 }
+/*-------Footer-----------*/
 
 address li{
 display:inline-block;
@@ -220,33 +292,11 @@ address a{
     color:#93193C;
 }
 
-header{
-  
-    flex: 1 1 auto;
-    
-    box-sizing:border-box;
-
-}
 
 
 
-main{
-    flex:2 1 auto;
-    padding:0.5em;
-    background-color:#CFBAC0;
-   
-    margin:1.2em 1em 2em;
-    border-radius: 30px ;
-    line-height:1.6em;
-    box-shadow: 5px 5px 10px #955D64;
-    box-sizing:border-box;
-}
 
 
-section {
-    font-size:1.2em;
-
-}
 
 footer{
     flex:1 1 auto;
@@ -255,47 +305,16 @@ footer{
     padding:1em;
 }
 
-table{
-    border-collapse:collapse;
-    background-color: #A78B93 ;
-    width:100%;
-
-}
-
-col[span]{
-    width:78%;
-    border-right:2px solid #31312F;
-}
-
-td{
-    padding:0.3em 1em;
-    border-bottom:2px solid #31312F;
-    border-top:2px solid #31312F;
-}
 
 
 
 
-img{
-    background-color: white;
-    border-radius: 10px;
-    box-shadow:2px 2px 4px #955D64;
-}
-details summary+p+ul, details summary+p {
-    display:none;
-}
-details summary:hover+p+ul, details summary:hover+p{
-    display:block;
-}
-summary span{
-   display:block;
-   font-size:0.8em;
-   font-style:italic;
-}
 
-summary{
-   outline:none;
-}
+
+
+/*---------End of Footer---------*/
+
+
 
 
 
@@ -330,7 +349,7 @@ summary{
         padding-bottom:3px;
 
     }
-    #header h1:first-of-type, #header h2:first-of-type{
+    #heading h1:first-of-type, #heading h2:first-of-type{
         border-bottom:none;
     }
     hgroup{
