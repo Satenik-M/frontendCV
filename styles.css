@@ -6,6 +6,9 @@ body {
     
 }
 #content{
+    display:flex;
+    flex-direction: column;
+   
     width:1024px;
     background-color:#FFFEFD; 
     border:1px solid #8a6464;
@@ -24,21 +27,31 @@ h1{
     margin-bottom:1px;
 
 }
-hgroup h2{
+h1+p{
     text-decoration:underline;
     font-style:oblique;
     font-size:1.2em;
     margin-top:2px;
 }
+figure{
+    width:30%;
+    float:left;
+}
+#header{
+    width:40%;
+    float:left;
+}
 
-#header time{
+
+
+#profile time{
     
     
     font-style:oblique;
 }
 
 #profile {
-    clear:both;
+   
     margin:20px 0;
     width:100%;
 
@@ -46,7 +59,7 @@ hgroup h2{
 }
 
 
-h2, legend{
+h2 {
     color:#685D6D;
 }
 legend{
@@ -56,11 +69,11 @@ legend{
 }
 
 address li{
-
+display:inline-block;
     float:left;
     padding:0.3em;
     border-right:1.5px solid #31312F;
-    display:inline-block;
+    
     list-style:none;
 }
 address ul{
@@ -78,22 +91,20 @@ address a{
 }
 
 header{
-    width:40%;
-    float:left;
-    padding-left:2em;
+  
+    flex: 1 1 auto;
+    
     box-sizing:border-box;
 
 }
 
-header section {
-    width:80%;
-}
+
 
 main{
+    flex:2 1 auto;
     padding:0.5em;
     background-color:#CFBAC0;
-    float:right;
-    width:55%;
+   
     margin:1.2em 1em 2em;
     border-radius: 30px ;
     line-height:1.6em;
@@ -107,6 +118,7 @@ section {
 }
 
 footer{
+    flex:1 1 auto;
     clear:both;
     text-align: right;
     padding:1em;
@@ -115,6 +127,7 @@ footer{
 table{
     border-collapse:collapse;
     background-color: #A78B93 ;
+    width:100%;
 
 }
 
