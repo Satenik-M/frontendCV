@@ -84,14 +84,14 @@ nav ul{
     list-style:none;
     font-weight:bold;
     margin:0;
-    padding-top:20px;
+    
     
 }
 nav li{
     font-size:0.9em;
 }
 nav li::before{
-    content:"V ";
+    content:"V";
     display:inline;
     color:green;
     
@@ -111,27 +111,27 @@ img{
 }
 /*-----End of Header--------*/
 /*-----Main---------*/
-main{
-    flex:2 1 auto;
-    padding:0.5em;
-    background-color:#FFFEFD;
-   
-    margin:1.2em 1em 2em;
+main {
+    flex: 2 1 auto;
+    padding: 0.5em;
+    background-color: #F5EFF1;
     
-    line-height:1.6em;
+    line-height: 1.6em;
     box-shadow: 5px 5px 10px #955D64;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 
 
-#mainAreaWrapper{
-    width:90%;
-    margin:20px auto;
-    padding:15px;
-    border:1px solid black;
 
 
+#mainAreaWrapper {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #B98E93;
+    background-color: #DEBBC4;
+    box-shadow: 2px 2px 10px 5px #C1989D;
 }
 #profile time{
     
@@ -141,29 +141,45 @@ main{
 
 #profile {
    
-    margin:20px 0;
-    border-bottom:3px solid black;
+    margin:10px 0;
+    /*border-bottom:3px solid black;*/
 
 }
-section{
-    font-size:1.2em;
- padding: 5tpx;
+#professionalBackground{
+
+    height:1050px;
+    margin:10px 0;
 }
-section:target{
-    box-shadow: 3px 3px 5px 2px   #8a6464,
-     -3px -3px  5px 2px #8a6464; 
-     background-color: #EFD5DC;
+#professionalBackground>section{
+    margin:10px 0;
+    
+}
+section {
+    font-size: 1.2em;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+}
+section:target {
+    box-shadow: 3px 3px 5px 2px #8a6464,
+ -3px -3px 5px 2px #8a6464;
+    background-color: rgb(253, 252, 230);
+    /* border: none !important; */
+}
+section:target ul, section:target ol{
+    border:none;
 }
 
 
 h2 {
     color:#685D6D;
 }
-#employment{
-    display:inline-block;
-    width:60%;
-    float:left;
-   
+#employment {
+    display: inline-block;
+    width: 60%;
+    float: left;
+    padding-bottom: 87px;
 }
 table{
     border-collapse:collapse;
@@ -241,15 +257,14 @@ summary{
 #hobbies{
     margin-top:20px;
     clear:left;
-    border-top:3px solid black;
+    /*border-top:3px solid black;*/
+    margin-bottom:10px;
 }
 #references{
     
-    border-top:3px solid black;
+    /*border-top:3px solid black;*/
 }
-section ol, section ul{
-    border-left:3px solid black;
-}
+
 
 
 
@@ -353,7 +368,6 @@ input[type='submit']
 
 fieldset#total{
    
-    /*border-radius: 20px;*/
     border:none;
     
 }
@@ -375,14 +389,15 @@ input, textarea, select{
     font-family:inherit;
     font-size:100%;
 }
-/*--------End of Form Design----------*/
-
-
 legend{
     font-size:1.3em;
     color:#4A454C;
     font-weight:bold;
 }
+/*--------End of Form Design----------*/
+
+
+
 /*-------Footer-----------*/
 
 address li{
@@ -408,23 +423,12 @@ address a{
 }
 
 
-
-
-
-
-
 footer{
     flex:1 1 auto;
     clear:both;
     text-align: center;
     padding:1em;
 }
-
-
-
-
-
-
 
 
 /*---------End of Footer---------*/
