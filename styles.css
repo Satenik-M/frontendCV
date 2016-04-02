@@ -90,8 +90,9 @@ nav ul{
 nav li{
     font-size:0.9em;
 }
-nav li::before{
-    content:"V";
+nav li:hover::before{
+   
+    content:"\27A4";
     display:inline;
     color:green;
     
@@ -107,17 +108,17 @@ img{
     background-color: white;
 
     border-radius: 10px;
-    box-shadow:2px 2px 4px #955D64;
+    box-shadow:2px 2px 4px #707474;
 }
 /*-----End of Header--------*/
 /*-----Main---------*/
 main {
     flex: 2 1 auto;
     padding: 0.5em;
-    background-color: #F5EFF1;
+    background-color: #F0F6F6;
     
     line-height: 1.6em;
-    box-shadow: 5px 5px 10px #955D64;
+    box-shadow: 0px 5px 10px #B7C7C6;
     box-sizing: border-box;
 }
 
@@ -126,12 +127,13 @@ main {
 
 
 #mainAreaWrapper {
-    width: 90%;
+    width: 95%;
     margin: 20px auto;
     padding: 15px;
-    border: 1px solid #B98E93;
-    background-color: #DEBBC4;
-    box-shadow: 2px 2px 10px 5px #C1989D;
+    border: 1px solid #A8A3A9;
+    background-color: rgb(213, 213, 213);
+    box-shadow: 2px 2px 10px 5px #B7C7C6;
+    border-radius: 20px;
 }
 #profile time{
 
@@ -168,8 +170,8 @@ section {
     border-radius: 10px;
 }
 section:target {
-    box-shadow: 3px 3px 5px 2px #8a6464,
-    -3px -3px 5px 2px #8a6464;
+    box-shadow: 3px 3px 5px 2px #707474,
+    -3px -3px 5px 2px #707474;
     background-color: rgb(253, 252, 230);
     /* border: none !important; */
 }
@@ -184,7 +186,7 @@ h2 {
 
 }
 #employment {
-    
+
     width: 60%;
     height:100%;
 
@@ -207,10 +209,13 @@ table td ul{
 }
 
 
-td{
-    padding:2px 5px;
-    border-bottom:2px solid #31312F;
-    border-top:2px solid #31312F;
+td {
+    padding: 2px 20px;
+    border-bottom: 2px solid #31312F;
+    /* border-top: 2px solid #31312F; */
+}
+#employment table{
+    margin-top:20px;
 }
 #employment table tr:last-of-type td{
     border-bottom:none;
@@ -221,49 +226,51 @@ td{
 
 
 summary span{
- display:block;
- font-size:0.8em;
- font-style:italic;
+   display:block;
+   font-size:0.8em;
+   font-style:italic;
 }
 
 summary{
- outline:none;
+   outline:none;
 }
 #education{
-    
+
     width:38%;
 
 }
 #trainings{
-    
+
     width:38%;
     
 }
 
 #strengths{
-    
+
     width:38%;
 
     
 }
 #skills{
-   
+
     width:38%;
 
     margin-bottom:10px;
-}
-#skills ul{
-    list-style:none;
-    padding-left:20px
+}   
 
-}
 #skills table{
+    margin:20px 0;
     border:none;
     text-align:left;
 }
+#skills table tr td:nth-child(2){
+    width:20%;
+    padding:0;
+
+}
 #hobbies{
-   
-    margin-bottom:10px;
+
+    margin:30px 0;
 }
 
 /*---------End of Main----------*/
@@ -430,44 +437,98 @@ footer{
     clear:both;
     text-align: center;
     padding:1em;
+    background-color:rgba(239, 242, 242, 0.1);
+
 }
 
+meter { -webkit-appearance: none; } 
+meter::-webkit-meter-bar{
+    width:60px;
+    height:20px;
+    border-radius:15px;
+    border:1px solid gray;
 
+}
+meter::-webkit-meter-optimum-value {
+    border-radius:25px;
+    background: #87C7DE;
+    background: linear-gradient(to bottom, black, #65b8d6 );
+}
+meter::-webkit-meter-even-less-good-value {
+    border-radius:25px;
+    background: #87C7DE;
+    background: linear-gradient(to bottom, black, red );
+}
+meter::-webkit-meter-suboptimum-value  {
+    border-radius:25px;
+    background: #87C7DE;
+    background: linear-gradient(to bottom, black, green );
+}
 /*---------End of Footer---------*/
 
 
 @media print{
     header nav{
         display:none;
- }
- #professionalBackground{
-    height:auto;
+    }
+    h2{
    
-    display:inline-block;
+        text-decoration: underline;
+        /*border-bottom:3px solid black;*/
+
+    }
+
+    section#trainings {/*does not work*/
+        page-break-before: always;
+    }
+    #professionalBackground{
+        height:auto;
+
+        display:block;
+    }
+    #professionalBackground>section{
+        width:100%;
+        height:auto;
+        float:none;
+        display:block;
+    }
+
+    *{
+        float:none;
+        color:black;
+        background-color: white;
+    }   
+    #content, #header, h1, nav li::before, nav li>a:link, nav li>a:visited, img, main, #mainAreaWrapper, section, section:target, h2, address li span, address a{
+        float:none;
+        color:black;
+        background-color: white;
+        margin:0 0px;
+        padding:0 10px;
+        box-shadow: none;
+    }
+    main, #mainAreaWrapper{
+        border:none;
+        display:block;
+    }
+    #professionalBackground>#skills{
+        width:50%;
+    }
+
+    meter::-webkit-meter-optimum-value {
+        border-radius:25px;
+        background-color: black;
+
+    }
+
+    small{
+        display:none;
+    }
+
+
+
 }
- #professionalBackground>section{
-    width:100%;
-    height:auto;
 
-    display:block;
-}
-
-
-
-/*------Print Media begins here-----------------
-@media print{
-
-    form{
-        display:none;
-    }
-    figure{
-        display:none;
-    }
-    footer{
-        display:none;
-    }
-
-
+/*------------
     
     body{
         font-family: 'Times New Roman';
@@ -550,6 +611,6 @@ details summary+p+ul, details summary+p {
 
 
 
-}*/
+}
 
 
