@@ -91,11 +91,19 @@ nav li{
     font-size:0.9em;
 }
 nav li:hover::before{
-   
+
     content:"\27A4";
     display:inline;
-    color:green;
+    color:#3E5759;
     
+}
+nav li:last-of-type:hover{
+
+    background-color: rgb(253, 252, 230);
+    
+    border:2px solid #3E5759;
+    border-radius:5px;
+    box-shadow:2px 2px 5px #3E5759;
 }
 nav li>a:link, nav li>a:visited{
     color:#4A454C;
@@ -181,9 +189,7 @@ section:target ul, section:target ol{
 
 
 h2 {
-
-    color:#685D6D;
-
+    color: #2B3B3D;
 }
 #employment {
 
@@ -268,6 +274,29 @@ summary{
     padding:0;
 
 }
+meter { -webkit-appearance: none; } 
+meter::-webkit-meter-bar{
+    width:60px;
+    height:20px;
+    border-radius:15px;
+    border:1px solid gray;
+
+}
+meter::-webkit-meter-optimum-value {
+    border-radius:25px;
+    background: #87C7DE;
+    background: linear-gradient(to bottom, black, #65b8d6 );
+}
+meter::-webkit-meter-even-less-good-value {
+    border-radius:25px;
+    background: #87C7DE;
+    background: linear-gradient(to bottom, black, red );
+}
+meter::-webkit-meter-suboptimum-value  {
+    border-radius:25px;
+    background: #87C7DE;
+    background: linear-gradient(to bottom, black, green );
+}
 #hobbies{
 
     margin:30px 0;
@@ -315,24 +344,22 @@ form#jobOffer{
 
 
 }
-#formClosure::after{
-    content:"X";
-    text-align:center;
+#formClosure::after {
+    content: "X";
+    text-align: center;
     font-weight: bold;
-    cursor:pointer;
-    display:inline-block;
-    position:relative;
-    top:10px;
-    left:-5px;
-    border:2px outset white;
-    border-radius:5px;
-    color:white;
-    background-color:#5B8351;
-    width:20px;
-    height:20px;
-    z-index:4;
-
-
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    left: -5px;
+    border: 2px outset white;
+    border-radius: 5px;
+    color: white;
+    background-color: #3E5759;
+    width: 20px;
+    height: 20px;
+    z-index: 4;
 }
 #formClosure::before{
     content:"";
@@ -349,10 +376,10 @@ form#jobOffer{
 /*---------End of Form Hiding/Showing----------*/ 
 
 /*----------Form design rules--------------*/
-form{
-    border:5px outset white;
-    border-radius:20px 20px;
-    background-color:#CBD9C7;
+form {
+    border: 5px outset white;
+    border-radius: 20px 20px;
+    background-color: #B7C8CD;
     box-shadow: 3px 3px 6px #3D625C;
 }
 input, select, textarea{
@@ -365,7 +392,7 @@ input[type="checkbox"], input[type="radio"]{
 input[type='submit']
 {
     margin-top:5px;
-    background-color: #5B8351;
+    background-color: #3E5759;
     color:white;
 
 }
@@ -412,9 +439,8 @@ legend{
 address li{
     display:inline-block;
     float:left;
-    padding:0.3em;
+    padding:0.5em;
     border-right:1.5px solid #31312F;
-    
     list-style:none;
 }
 address ul{
@@ -441,29 +467,7 @@ footer{
 
 }
 
-meter { -webkit-appearance: none; } 
-meter::-webkit-meter-bar{
-    width:60px;
-    height:20px;
-    border-radius:15px;
-    border:1px solid gray;
 
-}
-meter::-webkit-meter-optimum-value {
-    border-radius:25px;
-    background: #87C7DE;
-    background: linear-gradient(to bottom, black, #65b8d6 );
-}
-meter::-webkit-meter-even-less-good-value {
-    border-radius:25px;
-    background: #87C7DE;
-    background: linear-gradient(to bottom, black, red );
-}
-meter::-webkit-meter-suboptimum-value  {
-    border-radius:25px;
-    background: #87C7DE;
-    background: linear-gradient(to bottom, black, green );
-}
 /*---------End of Footer---------*/
 
 
