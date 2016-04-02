@@ -152,7 +152,7 @@ main {
 #profile {
 
     margin:10px 0;
-    /*border-bottom:3px solid black;*/
+    
 
 }
 #professionalBackground{
@@ -181,7 +181,7 @@ section:target {
     box-shadow: 3px 3px 5px 2px #707474,
     -3px -3px 5px 2px #707474;
     background-color: rgb(253, 252, 230);
-    /* border: none !important; */
+    
 }
 section:target ul, section:target ol{
     border:none;
@@ -218,7 +218,7 @@ table td ul{
 td {
     padding: 2px 20px;
     border-bottom: 2px solid #31312F;
-    /* border-top: 2px solid #31312F; */
+    
 }
 #employment table{
     margin-top:20px;
