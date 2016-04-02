@@ -306,6 +306,7 @@ meter::-webkit-meter-suboptimum-value  {
 /*----------Form Hiding-Showing---------*/
 #jobOfferWrapper{
     display:none;
+    position:absolute;
     top:0;
     left:0;
     width:100%;
@@ -527,94 +528,12 @@ footer{
     small{
         display:none;
     }
-
-
-
-}
-
-/*------------
-    
-    body{
-        font-family: 'Times New Roman';
-        border-top:25px solid #666666;
-
-
-    }
-    #content{
+    footer li{
+        display:block;
+        float:none;
         border:none;
-        box-shadow:none;
     }
-    h1, h2{
-        color:black;
-        border-bottom:1px solid black;
-        padding-bottom:3px;
-
-    }
-    #heading h1:first-of-type, #heading h2:first-of-type{
-        border-bottom:none;
-    }
-    hgroup{
-        text-align:center;
-        padding-top:30px;
-    }
-    address li{
-      float:left;
-      display:inline-block;
-      width:50%;
-      border-right:none;
-      box-sizing:border-box;
-      padding-left:150px;
-
-      
-  }
-  address li span, address a{
-    color:black;
-}
-address ul{
-    overflow:hidden;
-}
-
-
-header{
-    width:90%;
-    float:none;
-}
-main{
-    width:90%;
-    float:none;
-    border-radius:initial;
-    box-shadow:none;
-    background:initial;
-}
-table{
-    background-color: initial;
-}
-meter{
-    display:none;
-
-}
-section#employment{
-    page-break-before: always;
-
-}
-section#profile{
-    width:initial;
-}
-#profile h2{
-
-
-    padding-top:50px;
-}
-h2+p, h2+ul, h2+ol, h2+table{
-    margin-left:100px;
-}
-details summary+p+ul, details summary+p {
-    display:block;
-}
-
 
 
 
 }
-
-
