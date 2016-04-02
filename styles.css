@@ -3,8 +3,8 @@
 
 
 body {
-    
-    font-family:Academy, 'Times New Roman';
+
+    font-family: 'Times New Roman';
     font-size:1.1em;
     text-align:justify;
     
@@ -14,7 +14,7 @@ body {
 
     display:flex;
     flex-direction: column;
-   
+
     width:1024px;
     background-color:white; 
     border:1px solid #8a6464;
@@ -25,18 +25,18 @@ body {
 
 /*-----Header----------*/
 header{
-  
+
     flex: 1 1 auto;
     box-sizing:border-box;
     background:url(Images/feather.jpg) #CFBAC0;
 
 }
 #header{
-   
+
     width:auto;
     height:180px;
     background-color:rgba(255,255,255,0.7);
-  
+
     margin-top:5%;
     margin-bottom:5%;
     
@@ -80,7 +80,7 @@ nav{
     height:inherit;
 }
 nav ul{
-    
+
     list-style:none;
     font-weight:bold;
     margin:0;
@@ -105,7 +105,7 @@ nav li>a:link, nav li>a:visited{
 
 img{
     background-color: white;
-   
+
     border-radius: 10px;
     box-shadow:2px 2px 4px #955D64;
 }
@@ -134,24 +134,30 @@ main {
     box-shadow: 2px 2px 10px 5px #C1989D;
 }
 #profile time{
-    
-    
+
+
     font-style:oblique;
 }
 
 #profile {
-   
+
     margin:10px 0;
     /*border-bottom:3px solid black;*/
 
 }
 #professionalBackground{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    
 
-    height:1050px;
+    height:1150px;
     margin:10px 0;
 }
 #professionalBackground>section{
     margin:10px 0;
+    display:inline-block;
     
 }
 section {
@@ -163,7 +169,7 @@ section {
 }
 section:target {
     box-shadow: 3px 3px 5px 2px #8a6464,
- -3px -3px 5px 2px #8a6464;
+    -3px -3px 5px 2px #8a6464;
     background-color: rgb(253, 252, 230);
     /* border: none !important; */
 }
@@ -173,13 +179,16 @@ section:target ul, section:target ol{
 
 
 h2 {
+
     color:#685D6D;
+
 }
 #employment {
-    display: inline-block;
+    
     width: 60%;
-    float: left;
-    padding-bottom: 87px;
+    height:100%;
+
+    
 }
 table{
     border-collapse:collapse;
@@ -196,53 +205,51 @@ table td ul{
 .years{
     width:30%;
 }
-    
-    
+
+
 td{
     padding:2px 5px;
     border-bottom:2px solid #31312F;
     border-top:2px solid #31312F;
 }
-/*
-details summary+p+ul, details summary+p {
-    display:none;
+#employment table tr:last-of-type td{
+    border-bottom:none;
+} 
+#employment table tr td:first-of-type{
+    border-right:2px solid #31312F;
 }
-details summary:hover+p+ul, details summary:hover+p{
-    display:inline-block;
-    
-}*/
+
+
 summary span{
-   display:block;
-   font-size:0.8em;
-   font-style:italic;
+ display:block;
+ font-size:0.8em;
+ font-style:italic;
 }
 
 summary{
-   outline:none;
+ outline:none;
 }
 #education{
-    display:inline-block;
+    
     width:38%;
-    float:right;
-     
+
 }
 #trainings{
-    display:inline-block;
+    
     width:38%;
-    float:right;
-    clear:right;
+    
 }
-     
+
 #strengths{
-    display:inline-block;
+    
     width:38%;
-    float:right;
+
     
 }
 #skills{
-    display:inline-block;
+   
     width:38%;
-    float:right;
+
     margin-bottom:10px;
 }
 #skills ul{
@@ -255,24 +262,14 @@ summary{
     text-align:left;
 }
 #hobbies{
-    margin-top:20px;
-    clear:left;
-    /*border-top:3px solid black;*/
+   
     margin-bottom:10px;
 }
-#references{
-    
-    /*border-top:3px solid black;*/
-}
-
-
-
 
 /*---------End of Main----------*/
 /*----------Form Hiding-Showing---------*/
 #jobOfferWrapper{
     display:none;
-    position:fixed;
     top:0;
     left:0;
     width:100%;
@@ -331,15 +328,15 @@ form#jobOffer{
 
 }
 #formClosure::before{
-content:"";
-display:block;
-width:100%;
-height:100%;
-position:fixed;
-top:0;
-left:0;
-background-color:#FFFEFD;
-opacity:0.65;
+    content:"";
+    display:block;
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:#FFFEFD;
+    opacity:0.65;
 
 }
 /*---------End of Form Hiding/Showing----------*/ 
@@ -348,8 +345,8 @@ opacity:0.65;
 form{
     border:5px outset white;
     border-radius:20px 20px;
-     background-color:#CBD9C7;
-     box-shadow: 3px 3px 6px #3D625C;
+    background-color:#CBD9C7;
+    box-shadow: 3px 3px 6px #3D625C;
 }
 input, select, textarea{
     display:block ;
@@ -367,7 +364,7 @@ input[type='submit']
 }
 
 fieldset#total{
-   
+
     border:none;
     
 }
@@ -381,6 +378,11 @@ label{
     margin-top: 2px;
     margin-bottom:2px;
     
+}
+#skillsEnvolved li{
+    display: inline-block;
+    float: left;
+    width: 50%;
 }
 .innerLegend{
     font-size: 1.1em;
@@ -401,7 +403,7 @@ legend{
 /*-------Footer-----------*/
 
 address li{
-display:inline-block;
+    display:inline-block;
     float:left;
     padding:0.3em;
     border-right:1.5px solid #31312F;
@@ -434,11 +436,25 @@ footer{
 /*---------End of Footer---------*/
 
 
+@media print{
+    header nav{
+        display:none;
+ }
+ #professionalBackground{
+    height:auto;
+   
+    display:inline-block;
+}
+ #professionalBackground>section{
+    width:100%;
+    height:auto;
+
+    display:block;
+}
 
 
 
-
-/*------Print Media begins here-----------------*/
+/*------Print Media begins here-----------------
 @media print{
 
     form{
@@ -451,12 +467,13 @@ footer{
         display:none;
     }
 
+
     
     body{
         font-family: 'Times New Roman';
         border-top:25px solid #666666;
 
-       
+
     }
     #content{
         border:none;
@@ -476,63 +493,63 @@ footer{
         padding-top:30px;
     }
     address li{
-          float:left;
-        display:inline-block;
-        width:50%;
-        border-right:none;
-        box-sizing:border-box;
-        padding-left:150px;
-        
-      
-    }
-    address li span, address a{
-        color:black;
-    }
-    address ul{
-        overflow:hidden;
-    }
-    
-    
-    header{
-        width:90%;
-        float:none;
-    }
-    main{
-        width:90%;
-        float:none;
-        border-radius:initial;
-        box-shadow:none;
-        background:initial;
-    }
-    table{
-        background-color: initial;
-    }
-    meter{
-        display:none;
-
-    }
-    section#employment{
-        page-break-before: always;
-
-    }
-    section#profile{
-        width:initial;
-    }
-    #profile h2{
+      float:left;
+      display:inline-block;
+      width:50%;
+      border-right:none;
+      box-sizing:border-box;
+      padding-left:150px;
 
       
-        padding-top:50px;
-    }
-    h2+p, h2+ul, h2+ol, h2+table{
-        margin-left:100px;
-    }
-    details summary+p+ul, details summary+p {
+  }
+  address li span, address a{
+    color:black;
+}
+address ul{
+    overflow:hidden;
+}
+
+
+header{
+    width:90%;
+    float:none;
+}
+main{
+    width:90%;
+    float:none;
+    border-radius:initial;
+    box-shadow:none;
+    background:initial;
+}
+table{
+    background-color: initial;
+}
+meter{
+    display:none;
+
+}
+section#employment{
+    page-break-before: always;
+
+}
+section#profile{
+    width:initial;
+}
+#profile h2{
+
+
+    padding-top:50px;
+}
+h2+p, h2+ul, h2+ol, h2+table{
+    margin-left:100px;
+}
+details summary+p+ul, details summary+p {
     display:block;
 }
 
-    
-    
 
-}
+
+
+}*/
 
 
