@@ -1,20 +1,15 @@
 
-
-
-
 body {
-
     font-family: 'Times New Roman';
     font-size:1.1em;
     text-align:justify;
     
 }
+
 #content{
     position:relative;
-
     display:flex;
     flex-direction: column;
-
     width:1024px;
     background-color:white; 
     border:1px solid #8a6464;
@@ -25,18 +20,16 @@ body {
 
 /*-----Header----------*/
 header{
-
     flex: 1 1 auto;
     box-sizing:border-box;
     background:url(Images/feather.jpg) #CFBAC0;
 
 }
-#header{
 
+#header{
     width:auto;
     height:180px;
     background-color:rgba(255,255,255,0.7);
-
     margin-top:5%;
     margin-bottom:5%;
     
@@ -44,17 +37,15 @@ header{
 
 h1, h2  {
     letter-spacing:0.05em;
-
 }
 
 h1{
     color:#4A454C;
     font-size:2.5em;
     margin-bottom:auto;
-    margin-top:0;
-    
-
+    margin-top:0;  
 }
+
 h1+p{
     text-decoration:underline;
     font-style:oblique;
@@ -62,49 +53,48 @@ h1+p{
     margin-top:2px;
     margin-bottom:0;
 }
+
 figure{
     width:auto;
     float:left;
     margin:10px 30px 0 20px;
 }
+
 #heading{
     width:40%;
     height:auto;
     float:left;
-    
-
 }
+
 nav{
     display: inline-block;
     width:auto;
     height:inherit;
 }
-nav ul{
 
+nav ul{
     list-style:none;
     font-weight:bold;
     margin:0;
-    
-    
 }
+
 nav li{
     font-size:0.9em;
 }
-nav li:hover::before{
 
+nav li:hover::before{
     content:"\27A4";
     display:inline;
-    color:#3E5759;
-    
+    color:#3E5759;    
 }
-nav li:last-of-type:hover{
 
+nav li:last-of-type:hover{
     background-color: rgb(253, 252, 230);
-    
     border:2px solid #3E5759;
     border-radius:5px;
     box-shadow:2px 2px 5px #3E5759;
 }
+
 nav li>a:link, nav li>a:visited{
     color:#4A454C;
     text-decoration:none;
@@ -114,24 +104,20 @@ nav li>a:link, nav li>a:visited{
 
 img{
     background-color: white;
-
     border-radius: 10px;
     box-shadow:2px 2px 4px #707474;
 }
+
 /*-----End of Header--------*/
 /*-----Main---------*/
 main {
     flex: 2 1 auto;
     padding: 0.5em;
     background-color: #F0F6F6;
-    
     line-height: 1.6em;
     box-shadow: 0px 5px 10px #B7C7C6;
     box-sizing: border-box;
 }
-
-
-
 
 
 #mainAreaWrapper {
@@ -143,33 +129,29 @@ main {
     box-shadow: 2px 2px 10px 5px #B7C7C6;
     border-radius: 20px;
 }
+
 #profile time{
-
-
     font-style:oblique;
 }
 
 #profile {
-
     margin:10px 0;
-    
-
 }
+
 #professionalBackground{
     display:flex;
     flex-direction: column;
     flex-wrap:wrap;
-    justify-content:space-between;
-    
-
+    justify-content:space-between; 
     height:1150px;
     margin:10px 0;
 }
+
 #professionalBackground>section{
     margin:10px 0;
     display:inline-block;
-    
 }
+
 section {
     font-size: 1.2em;
     padding: 5px;
@@ -177,55 +159,57 @@ section {
     background-color: #F9F9F9;
     border-radius: 10px;
 }
+
 section:target {
     box-shadow: 3px 3px 5px 2px #707474,
     -3px -3px 5px 2px #707474;
-    background-color: rgb(253, 252, 230);
-    
+    background-color: rgb(253, 252, 230);  
 }
+
 section:target ul, section:target ol{
     border:none;
 }
 
-
 h2 {
     color: #2B3B3D;
 }
-#employment {
 
+#employment {
     width: 60%;
     height:100%;
-
-    
 }
+
 table{
     border-collapse:collapse;
     width:100%;
     margin-bottom:20px;
-
 }
+
 table td ul{
     border:none;
 }
+
 .employment{
     width:70%;
 }
+
 .years{
     width:30%;
 }
 
-
 td {
     padding: 2px 20px;
-    border-bottom: 2px solid #31312F;
-    
+    border-bottom: 2px solid #31312F; 
 }
+
 #employment table{
     margin-top:20px;
 }
+
 #employment table tr:last-of-type td{
     border-bottom:none;
 } 
+
 #employment table tr td:first-of-type{
     border-right:2px solid #31312F;
 }
@@ -240,27 +224,21 @@ summary span{
 summary{
    outline:none;
 }
+
 #education{
-
     width:38%;
-
 }
-#trainings{
 
+#trainings{
     width:38%;
-    
 }
 
 #strengths{
-
-    width:38%;
-
-    
+    width:38%; 
 }
+
 #skills{
-
     width:38%;
-
     margin-bottom:10px;
 }   
 
@@ -269,36 +247,42 @@ summary{
     border:none;
     text-align:left;
 }
+
 #skills table tr td:nth-child(2){
     width:20%;
     padding:0;
-
 }
-meter { -webkit-appearance: none; } 
+
+meter { 
+    -webkit-appearance: none; 
+} 
+
 meter::-webkit-meter-bar{
     width:60px;
     height:20px;
     border-radius:15px;
     border:1px solid gray;
-
 }
+
 meter::-webkit-meter-optimum-value {
     border-radius:25px;
     background: #87C7DE;
     background: linear-gradient(to bottom, black, #65b8d6 );
 }
+
 meter::-webkit-meter-even-less-good-value {
     border-radius:25px;
     background: #87C7DE;
     background: linear-gradient(to bottom, black, red );
 }
+
 meter::-webkit-meter-suboptimum-value  {
     border-radius:25px;
     background: #87C7DE;
     background: linear-gradient(to bottom, black, green );
 }
-#hobbies{
 
+#hobbies{
     margin:30px 0;
 }
 
@@ -323,8 +307,8 @@ meter::-webkit-meter-suboptimum-value  {
     display:table-cell;
     vertical-align:middle;
     margin:auto;
-
 }
+
 form#jobOffer{
     display:block;
     position:relative;
@@ -333,6 +317,7 @@ form#jobOffer{
     margin:auto;
     overflow:auto;
 }
+
 #formClosure{
     display:block;
     margin:auto;
@@ -341,10 +326,8 @@ form#jobOffer{
     z-index:2;
     cursor:default;
     text-align:right;
-
-
-
 }
+
 #formClosure::after {
     content: "X";
     text-align: center;
@@ -362,6 +345,7 @@ form#jobOffer{
     height: 20px;
     z-index: 4;
 }
+
 #formClosure::before{
     content:"";
     display:block;
@@ -372,7 +356,6 @@ form#jobOffer{
     left:0;
     background-color:#FFFEFD;
     opacity:0.65;
-
 }
 /*---------End of Form Hiding/Showing----------*/ 
 
@@ -383,49 +366,54 @@ form {
     background-color: #B7C8CD;
     box-shadow: 3px 3px 6px #3D625C;
 }
+
 input, select, textarea{
     display:block ;
     margin-bottom:10px;
 }
+
 input[type="checkbox"], input[type="radio"]{
     display:inline-block;
 }
+
 input[type='submit']
 {
     margin-top:5px;
     background-color: #3E5759;
     color:white;
-
 }
 
 fieldset#total{
-
     border:none;
-    
 }
+
 label{
     display:inline-block;
     margin-bottom:2px;
 }
+
 #skillsEnvolved{
     list-style:none;
     padding:2px;
     margin-top: 2px;
     margin-bottom:2px;
-    
 }
+
 #skillsEnvolved li{
     display: inline-block;
     float: left;
     width: 50%;
 }
+
 .innerLegend{
     font-size: 1.1em;
 }
+
 input, textarea, select{
     font-family:inherit;
     font-size:100%;
 }
+
 legend{
     font-size:1.3em;
     color:#4A454C;
@@ -444,9 +432,11 @@ address li{
     border-right:1.5px solid #31312F;
     list-style:none;
 }
+
 address ul{
     overflow:hidden;
 }
+
 address li span{
     color:#3D625C;
     font-weight: bold;
@@ -465,7 +455,6 @@ footer{
     text-align: center;
     padding:1em;
     background-color:rgba(239, 242, 242, 0.1);
-
 }
 
 
@@ -476,21 +465,20 @@ footer{
     header nav{
         display:none;
     }
-    h2{
-   
-        text-decoration: underline;
-        /*border-bottom:3px solid black;*/
 
+    h2{
+        text-decoration: underline;
     }
 
     section#trainings {/*does not work*/
         page-break-before: always;
     }
+
     #professionalBackground{
         height:auto;
-
         display:block;
     }
+
     #professionalBackground>section{
         width:100%;
         height:auto;
@@ -502,7 +490,8 @@ footer{
         float:none;
         color:black;
         background-color: white;
-    }   
+    }  
+
     #content, #header, h1, nav li::before, nav li>a:link, nav li>a:visited, img, main, #mainAreaWrapper, section, section:target, h2, address li span, address a{
         float:none;
         color:black;
@@ -511,10 +500,12 @@ footer{
         padding:0 10px;
         box-shadow: none;
     }
+
     main, #mainAreaWrapper{
         border:none;
         display:block;
     }
+
     #professionalBackground>#skills{
         width:50%;
     }
@@ -522,18 +513,15 @@ footer{
     meter::-webkit-meter-optimum-value {
         border-radius:25px;
         background-color: black;
-
     }
 
     small{
         display:none;
     }
+
     footer li{
         display:block;
         float:none;
         border:none;
     }
-
-
-
 }
