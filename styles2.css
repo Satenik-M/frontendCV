@@ -9,7 +9,7 @@
 @media (max-width:1800px){
 
 	body {
-		font-family: 'Times New Roman';
+		font-family: 'segoe ui', 'lucida sans unicode', 'lucida grande', lucida, sans-serif;;
 		font-size:1.1em;
 		text-align:left;
 
@@ -83,12 +83,16 @@
 	}
 
 	nav li {
-    background-color: rgb(132, 162, 160);
+    background-color: #B3B7C5;
     font-size: 0.9em;
     margin-bottom: 2px;
     padding: 5px 6px;
-
 }
+nav li:last-of-type{
+	margin-bottom:0;
+}
+
+
 nav li a{
 	width:100%;
 	height:100%;
@@ -106,7 +110,7 @@ nav li>a:visited{
 	}
 
 	nav a {
-		color:white;
+		color:#5F3D3D;
 		text-decoration:none;
 		font-style:oblique;
 		
@@ -129,6 +133,10 @@ nav li>a:visited{
 	#middle-section nav{
 		flex:1 1 10%;	
 
+	}
+	section ul li, section ol li{
+		display:list-item;
+		list-style:initial;
 	}
 	main{
 		flex: 1 1 80%;
@@ -153,15 +161,32 @@ nav li>a:visited{
 	section h1, section h2{
 		display:block;
 	}
-	table{
+	table {
 		display:table;
+		border-collapse:collapse;
+	}
+	thead{
+		display:table-header-group;
+		border-bottom:1px solid black;
+	}
+	tbody{
+		display:table-row-group;
 	}
 	tr{
 		display:table-row;
+		border-bottom:1px solid black;
+
 
 	}
-	td{
+	td, th{
 		display:table-cell;
+		border-right:1px solid black;
+		padding:5px 10px;
+	}
+	#employment tr td:nth-of-type(2), #employment tr th:nth-of-type(2)
+	{
+		padding-left:5px;
+		min-width:110px;
 	}
 
 
@@ -169,8 +194,10 @@ nav li>a:visited{
     transform: translateY(0px);
     z-index: 100;
     opacity: 1;
-    background-color: rgb(239, 227, 212);
+    background-color: #FFFDF6;
     transition: all ease-out 0.3s;
+    border-top:1px solid #DBC98C;
+    border-bottom:1px solid #DBC98C;
 }
 
 
@@ -178,8 +205,7 @@ nav li>a:visited{
     font-style:oblique;
 }
 #skills table{
-    margin:20px 0;
-    border:none;
+    
     text-align:left;
 }
 
@@ -222,8 +248,10 @@ address li {
     width: 100%;
     padding: 0 0.5em;
     margin:2px 0;
-    background-color: beige;
+    background-color: #EDF4EB;
     list-style: none;
+    border-top:1px solid #55984A;
+     border-bottom:1px solid #55984A;
 }
 
 address ul{
@@ -249,7 +277,7 @@ footer{
     flex:1 1 auto;
     clear:both;
     text-align: center;
-    padding:1em;
+    padding:1em 0;
     background-color:rgba(239, 242, 242, 0.1);
 }
 
@@ -257,6 +285,149 @@ small, small time{
 	display:inline-block;
 }
 
+/*----------Form Hiding-Showing---------*/
+#jobOfferWrapper{
+    display:table;
+    height:0;
+    opacity:0;
+    width:0;
+    position:absolute;
+    top:0;
+    left:0;
+    /*width:100%;*/
+    /*height:100%;*/
+    transition:height 4s, width 0s, opacity 1s, z-index 1s;
+    z-index: -2;
+}
+
+#jobOfferWrapper:target{
+    height:100%;
+    opacity:1;
+    width:100%;
+    z-index:10;
+}
+
+#containerForPost{
+    width:100%;
+    height:100%;
+    display:table-cell;
+    vertical-align:middle;
+    margin:auto;
+}
+
+form#jobOffer{
+    display:block;
+    position:relative;
+    width: 400px;
+    height: auto;
+    margin:auto;
+    overflow:auto;
+}
+
+#formClosure{
+    display:block;
+    margin:auto;
+    width:400px;
+    height:0;
+    z-index:2;
+    cursor:default;
+    text-align:right;
+}
+
+#formClosure::after {
+    content: "X";
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    left: -5px;
+    border: 2px outset white;
+    border-radius: 5px;
+    color: white;
+    background-color: #3E5759;
+    width: 20px;
+    height: 20px;
+    z-index: 4;
+}
+
+#formClosure::before{
+    content:"";
+    display:block;
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:#FFFEFD;
+    opacity:0.65;
+}
+form {
+    border: 5px outset white;
+    border-radius: 20px 20px;
+    background-color: #B7C8CD;
+    box-shadow: 3px 3px 6px #3D625C;
+    padding:10px;
+}
+
+input, select, textarea{
+    display:block ;
+    margin-bottom:10px;
+}
+
+input[type="checkbox"], input[type="radio"]{
+    display:inline-block;
+}
+
+input[type='submit']
+{
+    margin-top:5px;
+    background-color: #3E5759;
+    color:white;
+}
+
+fieldset#total{
+    border:none;
+}
+fieldset{
+	padding: 5px;
+}
+
+label{
+    display:inline-block;
+    margin-bottom:2px;
+}
+
+#skillsEnvolved{
+    list-style:none;
+    padding:2px;
+    margin-top: 2px;
+    margin-bottom:2px;
+}
+
+#skillsEnvolved li{
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+.innerLegend{
+    font-size: 1.1em;
+}
+
+input, textarea, select{
+    font-family:inherit;
+    font-size:100%;
+}
+
+legend{
+    font-size:1.3em;
+    color:#4A454C;
+    font-weight:bold;
+}
+
+/*---------End of Form Hiding/Showing----------*/ 
 
 
 

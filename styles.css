@@ -365,22 +365,17 @@ form#jobOffer{
     background-color:#FFFEFD;
     opacity:0.65;
 }
-form {
-    border: 5px outset white;
-    border-radius: 20px 20px;
-    background-color: #B7C8CD;
-    box-shadow: 3px 3px 6px #3D625C;
-    transition:width 3s, height 3s;
-}
-#formCLosure:visited+form{
-    width:0;
-    height:0;
-}
 
 /*---------End of Form Hiding/Showing----------*/ 
 
 /*----------Form design rules--------------*/
 
+form {
+    border: 5px outset white;
+    border-radius: 20px 20px;
+    background-color: #B7C8CD;
+    box-shadow: 3px 3px 6px #3D625C;
+}
 
 input, select, textarea{
     display:block ;
