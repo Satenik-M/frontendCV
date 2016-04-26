@@ -135,6 +135,14 @@ main {
     box-shadow: 0px 5px 10px #B7C7C6;
     box-sizing: border-box;
 }
+section img{
+    box-shadow:none; 
+    margin-right:4px;
+    width:35px;
+    height:35px;
+    border-radius:0;
+    background-color:initial;
+}
 
 
 #mainAreaWrapper {
@@ -490,9 +498,22 @@ footer{
     padding:1em;
     background-color:rgba(239, 242, 242, 0.1);
 }
+footer img{
+    width:40px;
+    height:40px;
+    background-color:none;
+    margin-right:2px;
+    border-radius:0;
+    box-shadow:none;
+}
+#social a{
+    text-decoration:none;
+}
 
 
 /*---------End of Footer---------*/
+
+
 @media (max-width:775px) {
     nav ul{
 
@@ -573,17 +594,23 @@ flex-direction: column;
 }
 
 @media print{
-    header nav{
+    nav, #social{
         display:none;
     }
 
     h2{
         text-decoration: underline;
     }
-
-    section#trainings {/*does not work*/
-        page-break-before: always;
+    
+    #strengths {/*does not work*/
+        /*page-break-before: always;*/
     }
+    #hobbies, #references{
+        margin-top:0;
+        margin-bottom:0;
+    }
+    
+
 
     #professionalBackground{
         height:auto;
@@ -616,9 +643,13 @@ flex-direction: column;
         border:none;
         display:block;
     }
+    section{
+        border-bottom:3px dotted black;
+        border-radius:0;
+    }
 
     #professionalBackground>#skills{
-        width:50%;
+        width: 100%;
     }
 
     meter::-webkit-meter-optimum-value {
@@ -629,10 +660,21 @@ flex-direction: column;
     small{
         display:none;
     }
-
+    footer{
+        padding:0;
+    }
     footer li{
         display:block;
         float:none;
         border:none;
+        padding: 2px;
     }
+    meter::-webkit-meter-optimum-value, 
+    meter::-webkit-meter-even-less-good-value, 
+    meter::-webkit-meter-suboptimum-value {
+
+    -webkit-print-color-adjust: exact; 
+}
+
+ 
 }
